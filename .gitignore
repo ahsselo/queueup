@@ -1,0 +1,19 @@
+.DS_Store
+**/.DS_Store
+.env
+**/.env
+
+# Java / Spring
+target/
+**/target/
+*.log
+
+# Node / frontend
+node_modules/
+**/node_modules/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/

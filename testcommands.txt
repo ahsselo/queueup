@@ -1,0 +1,43 @@
+-=Gradle commands:=-
+
+build the application:
+gradle build
+
+or using the springboot given version of gradle
+need to first change it to executable for unix
+chmod +x gradlew
+./gradlew build
+
+windows
+.\gradlew.bat build
+
+run the application:
+gradle bootrun
+
+unix
+./gradlew bootrun
+
+windows
+.\gradlew.bat bootrun
+
+-=CURL commands (in a new terminal window):=-
+
+view the entire queue:
+curl http://localhost:8080/api/queue  
+
+push a song to the queue:
+curl -X POST http://localhost:8080/api/queue/push -H "Content-Type: application/json" -d "{\"name\":\"SongName\", \"genre\":\"SongGenre\", \"duration\":1.0}"
+
+pop the top song from the queue:
+curl -X DELETE http://localhost:8080/api/queue/pop
+
+remove at index n:
+curl -X DELETE http://localhost:8080/api/queue/remove/n
+
+-=React commands (in a new terminal window):=-
+
+install node.js and required dependencies
+npm install
+
+start the react app
+npm start
